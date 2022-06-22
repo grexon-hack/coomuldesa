@@ -1,0 +1,663 @@
+body {
+    position: relative;
+    top: 100px;
+}
+.navbar {
+    width: 100%;
+    top: 0;
+    position: fixed;
+    z-index: 2;
+}
+.navbar ul {
+    font-weight: 600;
+}
+.logos {
+    width: 30%;
+    display: flex;
+    justify-content: space-around;
+    color: azure;
+}
+.logos div {
+    padding: 6px 10px;
+    border-radius: 50%;
+}
+.logos div:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 3px black;
+    cursor: pointer;
+}
+.logos .search {
+   
+    background-color:orange ;
+}
+.logos .facebook {
+    background-color: dodgerblue;
+}
+.facebook span {
+    font-weight: 800;
+    padding: 5px 5px;
+}
+.logos .twitter {
+    background-color:lightblue;
+}
+.logos .instagram {
+    background-image:linear-gradient(60deg, orange, red ) ;
+}
+.logos .youtube {
+    background-color: crimson;
+}
+
+.carousel-item img {
+    height: 520px;
+}
+.containerLogo-flex {
+    display: flex;
+    height: 200px;
+    margin-top: 30px;
+}
+.containerLogo-flex .logo {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    font-size: 20px;
+    cursor:pointer;
+}
+.containerLogo-flex .logo p {
+    width: 70%;
+    text-align: center;
+}
+.containerLogo-flex .logo img {
+    width:80px;
+}
+
+.containerLogo-flex .logo:hover img{
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 5px);
+}
+
+.containerNovedades {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.containerNovedades h2 {
+    color:darkorange;
+}
+.containerNovedades .black {
+    color: black;
+}
+.indicadores {
+    font-size: 20px;
+    font-weight: 500;
+}
+.indicadores:hover {
+    color: darkorange;
+    cursor: pointer;
+}
+
+.positionNovedades {
+    width: 80%;
+    height: 70%;
+    display: flex;
+    justify-content: space-around;
+}
+.containerNovedades .novedades {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+.containerNovedades .novedades .interes {
+    flex-grow: 1;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.containerNovedades .novedades .interes img {
+    width: 100%;
+    height: 60%;
+    border-radius: 30px;
+}
+
+.interes .date {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    font-size: .8rem;
+}
+.interes .date button {
+    border: none;
+    border-radius: 50px;
+    font-weight: 500;
+    color: azure;
+    padding: 3px 8px;
+    transition: 1s;
+}
+.interes .date button:hover {
+    color: rgb(164, 173, 173);
+    transform: scale(1.1);
+}
+.interes p {
+    width: 80%;
+    font-size: 20px;
+}
+.bottomNovedades {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+.bottomNovedades .spanClickButton {
+    display:flex;
+}
+.bottomNovedades span.click {
+    width: 10px;
+    height: 10px;
+    border: solid 2px;
+    border-radius: 50%;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.bottomNovedades .linkPublication {
+    padding: 15px;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    background-image: linear-gradient(120deg,rgb(210, 235, 220), rgb(77, 103, 77));
+    color: darkgreen;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 1s;
+}
+.bottomNovedades .linkPublication:hover {
+    transform: scale(1.1);
+}
+.servicios {
+    width: 100%;
+    height: 70vh;
+    background-color: orange;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    font-weight: 500;
+}
+.servicios h5 {
+    text-align: center;
+}
+
+.servicios .containerAhorros .white {
+    color: azure;
+}
+
+.servicios .containerAhorros {
+    width: 80%;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: -200px;
+    
+}
+.servicios .iconosServicios {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    font-weight: 500;
+}
+
+.iconosServicios div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.iconosServicios div:hover {
+    color: azure;
+    cursor: pointer;
+}
+.iconosServicios i {
+    font-size: 30px;
+}
+
+.servicios .containerAhorros .sliceServicios {
+    width: 100%;
+    height: 600px;
+    background-color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    border-radius: 50px;
+    
+}
+.sliceServicios .green {
+    color:darkgreen;
+}
+.container-infoService i {
+    color: darkgreen;
+}
+.linksArrow span:hover{
+    color: green;
+    cursor: pointer;
+}
+.servicios .containerAhorros .container-flex{
+    display:flex;
+    width: 90%;
+    height: 500px;
+    padding: 40px;
+    gap: 20px;
+}
+.servicios .containerAhorros .container-flex .container-infoService {
+    flex-grow: 1;
+}
+.containerSlice {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.containerSlice .container-inputSlice {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+}
+.containerImageSlice {
+    flex-grow: 1;
+    height: 80%;
+}
+.containerSlice .inputSlice {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: solid 2px;
+    margin: 0 5px;
+    cursor: pointer;
+}
+.containerSlice img {
+    width: 400px;
+    border-radius: 30px 0;
+}
+.serviciosDoble {
+    width: 100%;
+    height: 70vh;
+    position: relative;
+    background-color: rgba(250, 235, 215, 0.627);
+    z-index: -1;
+}
+.serviciosDoble::before {
+    content: '';
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    background-color: orange;
+    z-index: -1;
+    transform: skewY(30deg);
+    top: -70px;
+}
+.serviciosDoble::after {
+    content: '';
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    background-color: orange;
+    z-index: -1;
+    transform: skewY(-30deg);
+    top: -70px;
+    right: 0;
+}
+
+.containerImages {
+    width: 100%;
+    height: 220px;
+    position: absolute;
+    bottom: -120px;
+    text-align: center;
+}
+.containerImages .images {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.containerImages .images img {
+    width: 390px;
+    height: 200px;
+    padding: 0 20px;
+    border-radius: 50px;
+}
+.images .capa {
+    width: 350px;
+    height: 200px;
+    position: absolute;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.347);
+    border-radius: 40px;
+    text-align: start;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: azure;
+    margin-left: 20px;
+    
+}
+.images .capa i {
+    font-size: 30px;
+}
+
+
+.containerFooter {
+    width: 100%;
+    height: 70vh;
+    position: relative;
+    overflow: hidden;
+    font-size: 20px;
+    
+}
+.containerFooter .footer {
+    width: 100%;
+    height: 70%;
+    position:absolute;
+    bottom: 0;
+}
+.footer .infoContacto {
+    width: 100%;
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    margin:50px 0;
+}
+.containerEnlaces {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    font-weight: 500;
+    font-size: 18px;
+    color: gray;
+}
+.containerEnlaces div:hover {
+    color: black;
+    cursor:pointer;
+}
+.containerIcons {
+    width: 20%;   
+}
+.containerIcons .logos {
+    width: 100%;
+}
+.messengerFixed {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-image:linear-gradient(60deg,rgb(94, 141, 47), rgb(173, 173, 16) ) ;
+    position: fixed;
+    z-index: 5;
+    right: 15px;
+    bottom: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 35px;
+    color: azure;
+    cursor: pointer;
+}
+.cardHover {
+    width: 350px;
+    height: 400px;
+    position: fixed;
+    right: 50px;
+    bottom: 80px;
+    background-color: azure;
+    padding: 10px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px;
+}
+.cardHover .imageLogin {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgba(207, 207, 201, 0.493);
+    display: flex;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+}
+.cardHover .login {
+    display: flex;
+    justify-content: space-between;
+}
+.cardHover .login img {
+    width: 120px;
+    margin-top: 5px;
+    margin-left: -8px;
+    border-radius: 50%;
+}
+.cardHover .login .active {
+    width: 5px;
+    padding: 0 5px;
+    border-radius: 50%;
+    font-size: 7px;
+    background-color: chartreuse;
+    position: relative;
+    top: -20px;
+    left: 35px;
+}
+.login .logout {
+    width: 100px;
+    display: flex;
+}
+.login .logout span {
+    width: 40px;
+    height: 40px;
+    font-size: 30px;
+    padding: 0 10px;
+    border-radius: 50%;
+    background-color:rgba(207, 207, 201, 0.493) ;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
+.down {
+    margin-top: 10px;
+}
+.cardHover .chat span {
+    font-size: 13px;
+    color: gray;
+}
+.cardHover .chat span strong {
+    color: black;
+}
+.cardHover button {
+    width: calc(100% - 10px);
+    margin: 5px;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 500;
+}
+.cardHover .chat .buttonBlue {
+    background-color: blue;
+    color: rgba(240, 255, 255, 0.679);
+}
+.cardHover .chat .buttonBlue:hover {
+    color: azure;
+}
+
+.contactenos span, .direccion span {
+    color: rgb(178, 118, 7);
+    font-size: .9rem;
+    font-weight: 600;
+}
+.logout span:hover {
+    cursor: pointer;
+}
+
+@media (max-width: 1300px) {
+    .logos {
+        width: 40px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        right: 2px;
+        top: 100px;
+    }
+    .container-infoService img {
+        width: 100px;
+    }
+    .containerIcons {
+        display: none;
+    }
+    .containerImageSlice img{
+        width: 250px;
+    }
+    .container-flex {
+        margin-top: -40px;
+        flex-direction: column;
+    }
+    .logotipos {
+        width: 100%;
+    }
+}
+@media (max-width : 1050px) {
+    body {
+        font-size: .8rem;
+    }
+    .positionNovedades .novedades .interes:nth-child(1){
+        display: none;
+    }
+    .containerLogo-flex .logo {
+        font-size: 12px;
+    }
+    .containerLogo-flex .logo img {
+        width: 50px;
+    }
+    .servicios .containerAhorros .sliceServicios {
+        padding: 0;
+    }
+}
+@media (max-width:1000px) {
+    .containerFooter {
+        height: 320px;
+    }
+    .footer {
+        font-size: 12px;
+    }
+    .footer img {
+       display:none;
+    }
+    .containerEnlaces span {
+        font-size:12px;
+    }
+    .containerImages .images img{
+        width: 200px;
+    }
+    .containerImages .images .capa {
+        width: 160px;
+    }
+    .containerImages .images .capa h3 {
+        font-size: .6rem;
+    }
+}
+@media (max-width: 740px) {
+    .iconosServicios i {
+        display: none;
+    }
+    .iconosServicios {
+        flex-direction: column;
+    }
+    
+}
+
+@media (max-width: 650px) {
+    .containerNovedades h5,.positionNovedades p,span,button{
+        font-size: .9rem;
+    }
+    .positionNovedades .novedades {
+        flex-direction: column;
+    }
+    .positionNovedades .novedades .interes:nth-child(2) {
+        display: none;
+    }
+    .indicadores {
+        display: none;
+    }
+    .bottomNovedades {
+        gap:8px;
+        flex-direction: column;
+    }
+    .containerLogo-flex {
+        height: auto;
+        flex-wrap: wrap;
+    }
+    .container-infoService img {
+        width: 50px;
+    }
+}
+
+@media (max-width:590px) {
+    .containerSlice {
+        display: none;
+    }
+    .containerAhorros h5.white {
+        font-size: .8rem;
+    }
+    .servicios .containerAhorros .sliceServicios {
+        padding: 0;
+        height: 500px;
+    }
+    .containerImages .images {
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+    }
+    .images .imageInteres {
+        width: 100%;
+        height: 70px;
+        overflow: hidden;
+        margin:5px 0;
+        position: relative;
+    }
+    .images .imageInteres img {
+        border-radius: 0;
+        width: 100%;
+        margin: 0;
+    }
+    .images .imageInteres .capa {
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+        flex-direction:row;
+        align-items: center;
+        margin: 0;
+    }
+    .images .imageInteres .capa h3 {
+        font-size: 1rem;
+    }
+
+}
+@media (max-width: 400px) {
+    .cardHover {
+        width: 250px;
+    }
+}

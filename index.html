@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="./Css/style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="./js/main.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <img src="./image/logoCoomuldesa.PNG" alt="logo" />
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse container-xxl" id="navbarNav">
+          <ul class="navbar-nav container-fluid">
+            <li class="nav-item col">
+              <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+            </li>
+            <div class="nav-item dropdown col">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="dropdownMenuLink"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+                >Corporativo</a
+              >
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </li>
+              </ul>
+            </div>
+            <div class="nav-item dropdown col">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="dropdownMenuLink"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+                >Portafolio</a
+              >
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </li>
+              </ul>
+            </div>
+            <li class="nav-item col">
+              <a class="nav-link" href="#">Publicaciones</a>
+            </li>
+            <li class="nav-item col">
+              <a class="nav-link" href="#">Red oficinas</a>
+            </li>
+            <li class="nav-item col">
+              <a class="nav-link" href="#">Contáctenos</a>
+            </li>
+          </ul>
+        </div>
+        <div class="logos">
+          <div class="search">
+            <i class="bi bi-search"></i>
+          </div>
+          <div class="facebook">
+           <span> f</span>
+          </div>
+          <div class="twitter">
+            <i class="bi bi-twitter"></i>
+          </div>
+          <div class="instagram">
+            <i class="bi bi-instagram"></i>
+          </div>
+          <div class="youtube">
+            <i class="bi bi-youtube"></i>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div
+      id="carouselExampleInterval"
+      class="carousel slide"
+      data-bs-ride="carousel"
+    >
+      <div class="carousel-inner">
+        <div class="carousel-item active" data-bs-interval="10000">
+          <img
+            src="https://www.coomuldesa.com/Files/videos/credito.png"
+            class="d-block w-100"
+            alt="..."
+          />
+        </div>
+        <div class="carousel-item" data-bs-interval="10000">
+          <img
+            src="https://i.ytimg.com/vi/M1ReuwVwrnE/maxresdefault.jpg"
+            class="d-block w-100"
+            alt="..."
+          />
+        </div>
+        <div class="carousel-item" data-bs-interval="10000">
+          <img
+            src="https://pbs.twimg.com/media/FEUSiQDXIAQujAW.jpg"
+            class="d-block w-100"
+            alt="..."
+          />
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExampleInterval"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExampleInterval"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    <div class="containerLogo-flex"></div>
+    <div class="containerNovedades">
+      <h2>Noticias y Novedades</h2>
+      <h5 class="black">Información de Interés para nuestros asociados.</h5>
+      <div class="positionNovedades"></div>
+      <div class="bottomNovedades">
+        <div class="indicadores">
+          <i class="bi bi-graph-up-arrow"></i>
+          <span>Ver indicadores Económicos</span>
+        </div>
+        <div class="spanClickButton"></div>
+        <div class="linkPublication">Ver todas las Publicaciones</div>
+      </div>
+    </div>
+    <div class="servicios">
+      <div class="containerAhorros">
+        <h2 class="white">Nuestros servicios</h2>
+        <h5 class="white">
+          Nuestra experiencia y su confianza, garantizan la multiplicación de
+          sus ahorros y <br /> hacen posible la financiación de sus proyectos
+        </h5>
+        <br />
+
+        <br />
+
+        <div class="iconosServicios">
+          <div class="logoAhorro">
+            <i class="bi bi-piggy-bank"></i>
+            <span>AHORROS</span>
+          </div>
+          <div class="logoAhorro">
+            <i class="bi bi-credit-card"></i>
+            <span>CRÉDITOS</span>
+          </div>
+          <div class="logoAhorro">
+            <i class="bi bi-arrow-repeat"></i>
+            <span>GIROS RED CONECTA</span>
+          </div>
+          <div class="logoAhorro">
+            <i class="bi bi-currency-dollar"></i>
+            <span>CONVENIOS</span>
+          </div>
+          <div class="logoAhorro">
+            <i class="bi bi-pc-display"></i>
+            <span>SERVICIOS EN LÍNEA</span>
+          </div>
+          <div class="logoAhorro">
+            <i class="bi bi-pin-map"></i>
+            <span>RED OFICINA</span>
+          </div>
+        </div>
+        <br />
+
+        <div class="sliceServicios">
+          <h2 class="green">AHORROS</h2>
+          <br />
+          <div class="container-flex">
+            <div class="container-infoService">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Blanditiis, ex nemo. Incidunt deleniti veniam, repellat eius
+                voluptatibus minus non doloremque similique perferendis
+                necessitatibus id iste quae, possimus qui molestias fugiat.
+              </p>
+              <div>
+                <img src="./image/logiService.PNG" alt="" />
+                <span
+                  >Invierta sus ahorros en opciones sólidas, rentables y
+                  seguras</span
+                >
+              </div>
+              <div class="linksArrow">
+
+                <i class="bi bi-arrow-up-right"></i>
+                <span>Condiciones de Manejo de cuentas de Ahorros</span>
+                <br />
+                <i class="bi bi-arrow-up-right"></i>
+                <span>Conozca nuestros canales transaccionales</span>
+              </div>
+            </div>
+            <div class="containerSlice">
+              <div class="containerImageSlice">
+                <img class="imageSlice" src="./image/interes.jpg" alt="image" />
+                <img class="imageSlice" src="./image/interes2.jpg" alt="image" />
+                <img class="imageSlice" src="./image/interes3.jpg" alt="image" />
+              </div>
+
+              <div class="container-inputSlice"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="serviciosDoble">
+      <div class="containerImages">
+        <div class="images">
+          <div class="imageInteres">
+
+            <img src="./image/interes.jpg" alt="image" />
+            <div class="capa">
+              <div>
+                <i class="bi bi-gear"></i>
+              </div>
+              <h3>Aprendamos de Cooperativismo</h3>
+            </div>
+          </div>
+          <div class="imageInteres">
+
+            <img src="./image/interes2.jpg" alt="image" />
+            <div class="capa">
+              <div>
+                <i class="bi bi-shield-check"></i>
+              </div>
+              <h3>Actualización Registro <br /> Web DIAN</h3>
+            </div>
+          </div>
+          <div class="imageInteres">
+
+            <img src="./image/interes3.jpg" alt="image" />
+            <div class="capa">
+              <div>
+                <i class="bi bi-phone-flip"></i>
+              </div>
+              <h3>Instituto <br /> Coomuldesa</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="containerFooter">
+      <div class="footer">
+        <img class="logotipos" src="./image/logotipos.PNG" alt="logo" />
+        <div class="infoContacto">
+          <img src="./image/piramide.PNG" alt="logo" />
+          <div class="contactenos">
+            <span>CONTÁCTENOS</span>
+            <p>
+              PBX 7- 727 5493 - Fax 7- 727 6146
+              <br />
+              Email info@coomuldesa.com
+            </p>
+          </div>
+          <div class="direccion">
+            <span>DIRECCIÓN GENERAL</span>
+            <p>
+              Calle 16 No. 13 - 33, Edificio Luis
+              <br />
+              Torres Castro. Socorro - Santander
+            </p>
+          </div>
+          <div class="containerIcons">
+            <div class="logos">
+              <div class="facebook">
+               <span> f</span>
+              </div>
+              <div class="twitter">
+                <i class="bi bi-twitter"></i>
+              </div>
+              <div class="instagram">
+                <i class="bi bi-instagram"></i>
+              </div>
+              <div class="youtube">
+                <i class="bi bi-youtube"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="containerEnlaces">
+          <div>
+            <i class="bi bi-arrow-repeat"></i>
+            <span>Tarifas y Regulaciones</span>
+          </div>
+          <div>
+            <i class="bi bi-shield-lock-fill"></i>
+            <span>Política de Privacidad</span>
+          </div>
+          <div>
+            <i class="bi bi-person-video2"></i>
+            <span>Tratamiento de datos</span>
+          </div>
+          <div>
+            <i class="bi bi-person-lines-fill"></i>
+            <span>Servicio al Asociado</span>
+          </div>
+          <div>
+            <i class="bi bi-ui-checks"></i>
+            <span>Enlaces de Interés</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="cardHover">
+      <div class="login">
+        <div class="logoActive"> <span class="imageLogin"><img src="./image/piramide.png" alt="logo"></span> <span class="active"></span></div>
+        <div class="logout"><span><p>...</p></span><span><p class="down">-</p></span></div>
+      </div>
+      <div class="chat">
+        <h5>Chatear con Cooperativa</h5>
+        <span>Normalmente responde de inmediato</span>
+        <br />
+        <br />
+        <p>¡Hola! como podemos ayudarte?</p>
+        <button class="buttonBlue"><i class="bi bi-messenger"></i> Iniciar sesión en messenger</button>
+        <br />
+        <button>Continuar como invitado</button>
+        <br />
+        <span>Al continuar como invitado, aceptas las <strong>Condiciones</strong>,
+        la <strong>Política de datos</strong> y la <strong>Política de cookies</strong>
+         de Facebook.</span>
+      </div>
+    </div>
+    <div class="messengerFixed">
+      <i class="bi bi-messenger"></i>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
