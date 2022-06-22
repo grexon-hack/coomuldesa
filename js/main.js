@@ -57,35 +57,35 @@ const infoNovedades = [
 
 const arrayLogo = [
     {
-        image: "./image/login1.PNG",
+        image: "./image/login1.png",
         info: "Portal Transaccional"
     },
     {
-        image: "./image/login2.PNG",
+        image: "./image/login2.png",
         info: "Sucursal Virtual"
     },
     {
-        image: "./image/login3.PNG",
+        image: "./image/login3.png",
         info: "Credito en Linea"
     },
     {
-        image: "./image/login4.PNG",
+        image: "./image/login4.png",
         info: "Simulador de Ahorro"
     },
     {
-        image: "./image/login5.PNG",
+        image: "./image/login5.png",
         info: "Simulador de Crédito"
     },
     {
-        image: "./image/login6.PNG",
+        image: "./image/login6.png",
         info: "Red de Aliados"
     },
     {
-        image: "./image/login7.PNG",
+        image: "./image/login7.png",
         info: "¿Cómo Asociarme?"
     },
     {
-        image: "./image/login8.PNG",
+        image: "./image/login8.png",
         info: "Formulario PQRSF"
     }
 
