@@ -95,10 +95,11 @@ const arrayLogo = [
 $(function () {
     //CardChat--------------------------------------
     $('.cardHover').hide();
-    $('.messengerFixed').mouseover(function() {
-    $('.cardHover').fadeIn();
+    $('.messengerFixed').click(function(e) {
+        e.stopPropagation();
+        $('.cardHover').fadeIn();
     })
-    $('body').mousedown(function() {
+    $('html').click(function() {
     $('.cardHover').hide('slow');
     })
     //------------------------------------------
@@ -112,7 +113,6 @@ $(function () {
         $('.iconosServicios .logoAhorro:nth-child('+($(this).index() + 1) +')').css('color', 'azure');
         let data = $('.iconosServicios .logoAhorro:nth-child('+($(this).index() + 1) +')').text();
         $('.sliceServicios .green').text(data);
-        $('.sliceServicios').css('background', "rgb(218, 2"+($(this).index() + 1)+"3,"+($(this).index() + 1)+"23)")
     })
     //------------------------------------------------------------------------------
 

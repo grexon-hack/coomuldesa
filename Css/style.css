@@ -52,7 +52,7 @@ body {
 }
 .containerLogo-flex {
     display: flex;
-    height: 200px;
+    height: auto;
     margin-top: 30px;
 }
 .containerLogo-flex .logo {
@@ -102,19 +102,19 @@ body {
 }
 
 .positionNovedades {
-    width: 80%;
-    height: 70%;
+    width: 100%;
+    height: auto;
     display: flex;
     justify-content: space-around;
 }
 .containerNovedades .novedades {
-    width: 100%;
+    width: 90%;
     height: 100%;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
 }
 .containerNovedades .novedades .interes {
-    flex-grow: 1;
+    width: calc(100% / 3);
     padding: 30px;
     display: flex;
     flex-direction: column;
@@ -234,13 +234,13 @@ body {
 
 .servicios .containerAhorros .sliceServicios {
     width: 100%;
-    height: 600px;
+    height: auto;
     background-color: aliceblue;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 40px;
+    padding: 10px;
     border-radius: 50px;
     
 }
@@ -262,10 +262,10 @@ body {
     gap: 20px;
 }
 .servicios .containerAhorros .container-flex .container-infoService {
-    flex-grow: 1;
+    width: calc(100% / 2);
 }
 .containerSlice {
-    flex-grow: 1;
+    width: calc(100% / 2);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -296,7 +296,7 @@ body {
 }
 .serviciosDoble {
     width: 100%;
-    height: 70vh;
+    height: 80vh;
     position: relative;
     background-color: rgba(250, 235, 215, 0.627);
     z-index: -1;
@@ -376,6 +376,9 @@ body {
     height: 70%;
     position:absolute;
     bottom: 0;
+}
+.footer .logotipos {
+    width: 100%;
 }
 .footer .infoContacto {
     width: 100%;
@@ -510,6 +513,7 @@ body {
     cursor: pointer;
 }
 
+
 @media (max-width: 1300px) {
     .logos {
         width: 40px;
@@ -519,6 +523,9 @@ body {
         position: absolute;
         right: 2px;
         top: 100px;
+    }
+    .logos div {
+        margin: 5px 0;
     }
     .container-infoService img {
         width: 100px;
@@ -533,16 +540,28 @@ body {
         margin-top: -40px;
         flex-direction: column;
     }
+    .servicios .containerAhorros .container-flex .container-infoService {
+        width: 100%;
+        height: calc(100% / 2);
+    }
+    .servicios .containerAhorros .container-flex .containerSlice {
+        width: 100%;
+        height: calc(100% / 2);
+    }
     .logotipos {
         width: 100%;
+    }
+    .positionNovedades .novedades .interes:nth-child(1){
+        display: none;
+    }
+    .positionNovedades .novedades .interes {
+        width: calc(100% / 2);
+        height: 500px;
     }
 }
 @media (max-width : 1050px) {
     body {
         font-size: .8rem;
-    }
-    .positionNovedades .novedades .interes:nth-child(1){
-        display: none;
     }
     .containerLogo-flex .logo {
         font-size: 12px;
@@ -550,9 +569,7 @@ body {
     .containerLogo-flex .logo img {
         width: 50px;
     }
-    .servicios .containerAhorros .sliceServicios {
-        padding: 0;
-    }
+   
 }
 @media (max-width:1000px) {
     .containerFooter {
@@ -576,6 +593,19 @@ body {
     .containerImages .images .capa h3 {
         font-size: .6rem;
     }
+    .servicios {
+        height: 380px;
+    }
+    .servicios .containerAhorros {
+        padding-top: 10px;
+        bottom: -300px;
+    }
+    .serviciosDoble {
+        height: 90vh;
+    }
+    .messengerFixed:checked .cardHover{
+        display: block;
+    }
 }
 @media (max-width: 740px) {
     .iconosServicios i {
@@ -583,8 +613,30 @@ body {
     }
     .iconosServicios {
         flex-direction: column;
+        align-items: flex-start;
     }
-    
+    .carousel-item img {
+        height: 320px;
+    }
+    .logos {
+        flex-direction:row;
+        top:90px;
+        width: 210px;
+    }
+    .logos div {
+        margin: 0 5px;
+    }
+    .containerNovedades {
+        height: auto;
+        padding:10px 0;
+        justify-content: flex-start;
+    }
+    .novedades .interes{
+        height: 500px;
+    }
+    .footer .containerEnlaces {
+        font-size: 10px;
+    }
 }
 
 @media (max-width: 650px) {
@@ -597,9 +649,13 @@ body {
     .positionNovedades .novedades .interes:nth-child(2) {
         display: none;
     }
+    .positionNovedades .novedades .interes {
+        width:100%;
+    }
     .indicadores {
         display: none;
     }
+    
     .bottomNovedades {
         gap:8px;
         flex-direction: column;
@@ -614,15 +670,21 @@ body {
 }
 
 @media (max-width:590px) {
-    .containerSlice {
-        display: none;
+    .servicios .containerAhorros {
+        width: 100%;
     }
-    .containerAhorros h5.white {
-        font-size: .8rem;
+    .servicios .iconosServicios {
+        padding-left: 10px;
     }
     .servicios .containerAhorros .sliceServicios {
-        padding: 0;
-        height: 500px;
+        border-radius: 0;
+    }
+    .servicios .containerAhorros .sliceServicios .container-flex {
+        padding: 20px;
+    }
+
+    .containerAhorros h5.white {
+        font-size: .8rem;
     }
     .containerImages .images {
         width: 100%;
@@ -642,6 +704,7 @@ body {
         border-radius: 0;
         width: 100%;
         margin: 0;
+        padding: 0;
     }
     .images .imageInteres .capa {
         width: 100%;
@@ -656,8 +719,37 @@ body {
     }
 
 }
-@media (max-width: 400px) {
+@media (max-width: 420px) {
     .cardHover {
         width: 250px;
+    }
+    .logoCoomuldesa {
+        width: 200px;
+        margin:10px 0;
+    }
+
+}
+@media (max-width: 400px) {
+    .servicios .containerAhorros {
+        bottom: -260px;
+    }
+    .containerSlice {
+        display: none;
+    }
+    .servicios .containerAhorros .container-flex {
+        height: auto;
+    }
+    .navbar .logos div {
+        margin: 2px;
+    }
+    .containerImages {
+        bottom: -80px;
+    }
+    .footer .containerEnlaces {
+        flex-direction: column;
+        padding-left: 5px;
+    }
+    .footer .infoContacto {
+       margin: 0;
     }
 }
