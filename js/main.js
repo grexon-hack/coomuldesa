@@ -95,12 +95,12 @@ const arrayLogo = [
 $(function () {
     //CardChat--------------------------------------
     $('.cardHover').hide();
-    $('.messengerFixed').click(function(e) {
+    $('.messengerFixed').click(function (e) {
         e.stopPropagation();
         $('.cardHover').fadeIn();
     })
-    $('html').click(function() {
-    $('.cardHover').hide('slow');
+    $('html').click(function () {
+        $('.cardHover').hide('slow');
     })
     //------------------------------------------
 
@@ -108,19 +108,19 @@ $(function () {
     $('.iconosServicios .logoAhorro').css('color', 'rgb(218, 223, 223)')
     $('.iconosServicios .logoAhorro:first').css('color', 'azure');
 
-    $('.iconosServicios .logoAhorro').on('click', function() {
+    $('.iconosServicios .logoAhorro').on('click', function () {
         $('.iconosServicios .logoAhorro').css('color', 'rgb(218, 223, 223)')
-        $('.iconosServicios .logoAhorro:nth-child('+($(this).index() + 1) +')').css('color', 'azure');
-        let data = $('.iconosServicios .logoAhorro:nth-child('+($(this).index() + 1) +')').text();
+        $('.iconosServicios .logoAhorro:nth-child(' + ($(this).index() + 1) + ')').css('color', 'azure');
+        let data = $('.iconosServicios .logoAhorro:nth-child(' + ($(this).index() + 1) + ')').text();
         $('.sliceServicios .green').text(data);
     })
     //------------------------------------------------------------------------------
 
     //class='containerLogo-flex'-------------------------------------------
     for (let i = 0; i < arrayLogo.length; i++) {
-        $('.containerLogo-flex').append('<div class="logo"></div>') 
+        $('.containerLogo-flex').append('<div class="logo"></div>')
     }
-    $('.logo').each(function(index, data) {
+    $('.logo').each(function (index, data) {
         $(data).append(`<img src=${arrayLogo[index].image} alt="logo" />
         <p>${arrayLogo[index].info}</p>`)
     })
