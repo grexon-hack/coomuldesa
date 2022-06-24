@@ -6,7 +6,7 @@ body {
     width: 100%;
     top: 0;
     position: fixed;
-    z-index: 2;
+    z-index: 6;
 }
 .navbar ul {
     font-weight: 600;
@@ -16,22 +16,32 @@ body {
     display: flex;
     justify-content: space-around;
     color: azure;
+    align-items: center;
 }
-.logos div {
+.logos div:not(.facebook) {
     padding: 6px 10px;
     border-radius: 50%;
 }
-.logos div:hover {
+.logos div:hover:not(.facebook) {
     transform: scale(1.1);
     box-shadow: 0 0 3px black;
     cursor: pointer;
 }
 .logos .search {
-   
     background-color:orange ;
 }
 .logos .facebook {
-    background-color: dodgerblue;
+    margin:0 5px ;
+    border-radius: 0;
+    color: blue;
+    transform: scale(2.1);
+    border-radius: 50%;
+    height: fit-content;
+}
+.logos .facebook:hover {
+    filter: drop-shadow(0 0 3px grey);
+    cursor: pointer;
+    transform: scale(2.2);
 }
 .facebook span {
     font-weight: 800;
@@ -216,6 +226,7 @@ body {
     display: flex;
     justify-content: space-around;
     font-weight: 500;
+    z-index: 2;
 }
 
 .iconosServicios div {
@@ -242,6 +253,7 @@ body {
     align-items: center;
     padding: 10px;
     border-radius: 50px;
+    z-index: 3;
     
 }
 .sliceServicios .green {
@@ -299,7 +311,6 @@ body {
     height: 80vh;
     position: relative;
     background-color: rgba(250, 235, 215, 0.627);
-    z-index: -1;
 }
 .serviciosDoble::before {
     content: '';
@@ -307,7 +318,6 @@ body {
     height: 200px;
     position: absolute;
     background-color: orange;
-    z-index: -1;
     transform: skewY(30deg);
     top: -70px;
 }
@@ -317,7 +327,6 @@ body {
     height: 200px;
     position: absolute;
     background-color: orange;
-    z-index: -1;
     transform: skewY(-30deg);
     top: -70px;
     right: 0;
@@ -329,39 +338,55 @@ body {
     position: absolute;
     bottom: -120px;
     text-align: center;
+    z-index: 5;
 }
 .containerImages .images {
     width: 100%;
     display: flex;
     justify-content: center;
+    gap: 20px;
 }
-
-.containerImages .images img {
-    width: 390px;
-    height: 200px;
-    padding: 0 20px;
+.containerImages .images .imageInteres {
+    width: calc((90% / 3) - 60px );
     border-radius: 50px;
+    position: relative;
+    overflow: hidden;
+  
 }
-.images .capa {
-    width: 350px;
+.containerImages .images .imageInteres img {
+    width: 100%;
+    height: 200px;
+    border-radius: 50px;
+    transition: 1s;
+}
+.images .imageInteres .capa {
+    width: 100%;
     height: 200px;
     position: absolute;
     top: 0;
     background-color: rgba(0, 0, 0, 0.347);
-    border-radius: 40px;
+    border-radius: 50px;
     text-align: start;
     padding: 30px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     color: azure;
-    margin-left: 20px;
-    
+    cursor: pointer;
 }
 .images .capa i {
     font-size: 30px;
 }
-
+.imageInteres:hover img{
+    transform: scale(1.2);
+}
+.imageInteres:hover .capa {
+    backdrop-filter: blur(5px);
+    text-align: center;
+}
+.imageInteres:hover .capa i {
+    font-size: 40px;
+}
 
 .containerFooter {
     width: 100%;
@@ -369,7 +394,6 @@ body {
     position: relative;
     overflow: hidden;
     font-size: 20px;
-    
 }
 .containerFooter .footer {
     width: 100%;
@@ -431,6 +455,7 @@ body {
     padding: 10px;
     border-radius: 20px;
     box-shadow: 0 0 10px;
+    z-index: 6;
 }
 .cardHover .imageLogin {
     width: 50px;
@@ -523,8 +548,13 @@ body {
         position: absolute;
         right: 2px;
         top: 100px;
+        
     }
     .logos div {
+        margin: 5px 0;
+        z-index: 6;
+    }
+    .logos .facebook {
         margin: 5px 0;
     }
     .container-infoService img {
@@ -569,7 +599,9 @@ body {
     .containerLogo-flex .logo img {
         width: 50px;
     }
-   
+    .logos .facebook i {
+        font-size: .9rem;
+    }
 }
 @media (max-width:1000px) {
     .containerFooter {
@@ -584,15 +616,9 @@ body {
     .containerEnlaces span {
         font-size:12px;
     }
-    .containerImages .images img{
-        width: 200px;
-    }
-    .containerImages .images .capa {
-        width: 160px;
-    }
     .containerImages .images .capa h3 {
-        font-size: .6rem;
-    }
+        font-size: .8rem;
+    } 
     .servicios {
         height: 380px;
     }
@@ -626,6 +652,9 @@ body {
     .logos div {
         margin: 0 5px;
     }
+    .logos .facebook {
+        margin: 0 10px;
+    }
     .containerNovedades {
         height: auto;
         padding:10px 0;
@@ -636,6 +665,36 @@ body {
     }
     .footer .containerEnlaces {
         font-size: 10px;
+    }
+    .containerImages{
+        width: 100%;
+        bottom: -50px;
+    }
+    .containerImages .images {
+        width: 100%;
+        height: 300px;
+        flex-direction: column;
+        margin: 0;
+
+    }
+    .images .imageInteres{
+      width: 100% !important;
+      height: calc(100% / 3);
+      border-radius: 0 !important;
+      margin: 0 !important;
+    }
+    .images .imageInteres img {
+        border-radius: 0 !important;
+    }
+    .images .imageInteres .capa {
+        flex-direction: row;
+        align-items: center;
+        height: 100px;
+        border-radius: 0;
+    }
+    .images .imageInteres .capa h3 {
+        font-size: 1rem;
+        text-align: center;
     }
 }
 
@@ -686,37 +745,7 @@ body {
     .containerAhorros h5.white {
         font-size: .8rem;
     }
-    .containerImages .images {
-        width: 100%;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin: 0;
-    }
-    .images .imageInteres {
-        width: 100%;
-        height: 70px;
-        overflow: hidden;
-        margin:5px 0;
-        position: relative;
-    }
-    .images .imageInteres img {
-        border-radius: 0;
-        width: 100%;
-        margin: 0;
-        padding: 0;
-    }
-    .images .imageInteres .capa {
-        width: 100%;
-        height: 100%;
-        border-radius: 0;
-        flex-direction:row;
-        align-items: center;
-        margin: 0;
-    }
-    .images .imageInteres .capa h3 {
-        font-size: 1rem;
-    }
+   
 
 }
 @media (max-width: 420px) {
@@ -739,11 +768,14 @@ body {
     .servicios .containerAhorros .container-flex {
         height: auto;
     }
-    .navbar .logos div {
+    .navbar .logos div:not(.facebook) {
         margin: 2px;
     }
+    .logos .facebook {
+        margin: 8px;
+    }
     .containerImages {
-        bottom: -80px;
+        bottom: 0;
     }
     .footer .containerEnlaces {
         flex-direction: column;
